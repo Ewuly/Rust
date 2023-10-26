@@ -4,7 +4,7 @@
 } 
 
 fn foo() -> String {
-    let s = String::from("Ewan");
+    let s = String::from("Ewuly");
     s
 }
 
