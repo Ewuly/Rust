@@ -1,10 +1,11 @@
- fn main() {
-    let bar = foo();
-    println!("{bar}");
-} 
+use std::net::TcpListener;
 
-fn foo() -> String {
-    let s = String::from("Ewuly1test");
-    s
+fn main() {
+    let listener = TcpListener::bind("127.0.0.1:7878").unwrap();
+
+    for stream in listener.incoming() {
+        let _stream = stream.unwrap();
+
+        println!("Connection established!");
+    }
 }
-
