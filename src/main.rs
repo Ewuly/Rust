@@ -1,18 +1,9 @@
-#[allow(dead_code)]
-enum Continent {
-    Europe,
-    Asia,
-    Africa,
-    // ...
+// generic : peut prendre different types
+fn find_something<T: std::fmt::Display>(something: T) {
+    println!("Votre something: {}", something);
 }
 
 fn main() {
-    let continent = Continent::Africa;
-
-    match continent {
-        Continent::Europe => print!("EU"),
-        Continent::Asia => print!("A"),
-        Continent::Africa => print!("AF"),
-    }
-
+    let my_number = find_something(7);
+    let my_string = find_something(String::from("value"));
 }
