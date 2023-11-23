@@ -10,6 +10,7 @@ fn largest<T>(list: &[T]) -> &T {
     largest
 }
 
+//main
 fn main() {
     let number_list = vec![34, 50, 25, 100, 65];
 
